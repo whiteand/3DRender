@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Кривая 5-го порядка</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="js/vue.js"></script>
+</head>
+<body>
+
+	<canvas id="canvas"></canvas>
+	<div id="inputApp">
+
+		Крива: <input type="checkbox" v-model="draw.curve">
+		Еволюта: <input type="checkbox" v-model="draw.evoluta">
+		<!--Евольвента: <input type="checkbox" v-model="draw.evolventa">-->
+		<!--Крива радіусів скруту: <input type="checkbox" v-model="draw.rotate">-->
+		<select name="point" v-model="currentPoint">
+			<option v-for="opt in options" :value="opt.value">{{opt.text}}</option>
+		</select>
+		<div>
+			<div>t: <input type="range" v-model.number="currentT" step="0.0001" min="0" max="1" style="width: 600px"> {{currentT}}</div>
+			<div>x: <input type="range" v-model.number="points[currentPoint].x" style="width: 300px" step="0.001" min="-4" max="4"> {{points[currentPoint].x.toFixed(2)}}</div>
+			<div>y: <input type="range" v-model.number="points[currentPoint].y" style="width: 300px" step="0.001" min="-4" max="4"> {{points[currentPoint].y.toFixed(2)}}</div>
+			<div>z: <input type="range" v-model.number="points[currentPoint].z" style="width: 300px" step="0.001" min="-4" max="4"> {{points[currentPoint].z.toFixed(2)}}</div>
+		</div>
+		
+	</div>
+	<script src="js/d3.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

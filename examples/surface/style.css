@@ -1,0 +1,54 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: Tahoma, sans-serif;
+	padding: 10px;
+	background-color: #223;
+	color: white;
+}
+hr {
+	margin: 5px 0;
+}
+.label {
+	width: 400px;
+	display: inline-block;
+}
+.label .value{
+	width: 300px;
+}
+.equation {
+	display: block;
+	width: 300px;
+	text-align: center;
+	border: 1px solid #333;
+	background-color: rgba(0, 64, 255, 0.3);
+	border-radius: 3px;
+}
+.value {
+	width: 100px;
+}
+.label {
+	font-size: 20px;
+}
+#inputApp {
+}
+table {
+	border-spacing: 5px;
+	width: 95vw;
+}
+td {
+	min-width: 200px;
+}
+tr td:first-child {
+	width: 4px;
+}
+input {
+	width: 65%;
+}
+
+#canvas {
+	/*border: 1px solid #000;*/
+	outline: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Безьє 5-й степени</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<canvas id="canvas" tabindex="1"></canvas>
+	<hr>
+	<div id="inputApp">	
+		<table>
+			<tr>
+				<td>x:
+				<input type="range" v-model.number="points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].x" step="0.001" min="-4" max="4">
+				{{points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].x.toFixed(3)}}</td>
+				<td>y:
+				<input type="range" v-model.number="points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].y" step="0.001" min="-4" max="4">
+				{{points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].y.toFixed(3)}}</td>
+				<td>z:
+				<input type="range" v-model.number="points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].z" step="0.001" min="-4" max="4">
+				{{points[currentPoint.i*100+currentPoint.j*10+currentPoint.k].z.toFixed(3)}}</td>
+				<td>w:
+				<input type="range" v-model.number="weights[currentPoint.i*100+currentPoint.j*10+currentPoint.k]" step="0.001" min="0" max="8">
+				{{weights[currentPoint.i*100+currentPoint.j*10+currentPoint.k].toFixed(3)}}</td>
+				<td>
+					<select name="point" v-model="currentPoint">
+						<option v-for="opt in options" :value="opt.value">{{opt.text}}</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script src="js/d3.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
