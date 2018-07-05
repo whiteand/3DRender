@@ -6,7 +6,7 @@
 
 # Результат
 
-<img src="https://media.giphy.com/media/cRMgBWkKWkyVlJ8N0H/giphy.gif"></img>
+<img src="https://github.com/whiteand/3DRender/blob/master/Gifs/Bezier.gif"></img>
 
-<img src="https://media.giphy.com/media/9A34Bpd8TF7PzqFA9b/giphy.gif"></img>
+<img src="https://github.com/whiteand/3DRender/blob/master/Gifs/Bezier_Around.gif"></img>
 
